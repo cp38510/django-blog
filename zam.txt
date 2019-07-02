@@ -1,0 +1,264 @@
+mkdir django
+cd django
+
+python3 -m venv myvenv
+source myvenv/bin/activate
+python3 -m pip install --upgrade pip
+
+nano requirements.txt
+Django~=2.0.6
+
+
+pip install -r requirements.txt
+pip install requests
+
+apt install git
+
+
+#registration on https://www.pythonanywhere.com/
+#«Create new API token»: bdcffe22cf57def45614173fa27fd853d509c983
+
+import requests
+my_domain = 'cp38510.pythonanywhere.com'
+username = 'cp38510'
+token = 'bdcffe22cf57def45614173fa27fd853d509c983'
+
+response = requests.post(
+  'https://www.pythonanywhere.com/api/v0/user/{username}/webapps/{domain}/reload/'.format(
+      username=username, domain=my_domain
+  ),
+  headers={'Authorization': 'Token {token}'.format(token=token)}
+)
+if response.status_code == 200:
+  print('All OK')
+else:
+  print('Got unexpected status code {}: {!r}'.format(response.status_code, response.content))
+
+
+####
+
+########################################################################
+
+Type's:
+
+- List []
+
+# lottery.sort() - sort list "lottery"
+# lottery.reverse() - reverse list
+# lottery.append(25) - add var 25 in list
+# lottery.pop(0) - delete var with index = 0
+
+#https://docs.python.org/3/tutorial/datastructures.html
+
+- Dictionary {}
+
+# participant['favorite_language'] = 'Python' - insert key = value
+# participant.pop('favorite_numbers')   - delete key
+
+
+
+# Set only 'True'
+
+ 
+###########################################
+
+#Create test site
+
+source myvenv/bin/activate
+
+#https://github.com/ggcarrots/django-carrots
+#Create project:
+django-admin startproject mysite .
+
+#https://docs.djangoproject.com/en/1.11/ref/settings/#language-code
+#change settings
+vim mysite/settings.py
+
+add:
+
+TIME_ZONE = 'Europe/Moscow'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+ALLOWED_HOSTS = ['127.0.0.1', 'cp38510.pythonanywhere.com']
+
+#Create sqlite3 database for site
+python manage.py migrate
+
+#Run webserver
+python manage.py runserver
+
+#Go to http://127.0.0.1:8000/
+
+###########################################
+
+#Create blog
+
+source myvenv/bin/activate
+python manage.py startapp blog
+
+
+vim mysite/settings.py
+add in INSTALLED_APPS:
+'blog',
+
+#https://docs.djangoproject.com/en/1.11/ref/models/fields/#field-types
+#change
+vim blog/models.py
+remove all and insert https://tutorial.djangogirls.org/ru/django_models/
+
+#save changes model
+python manage.py makemigrations blog
+python manage.py migrate blog
+
+
+##########################################
+
+#Administration
+
+vim blog/admin.py
+change all to https://tutorial.djangogirls.org/ru/django_admin/
+
+#start server 
+python manage.py runserver
+#go to http://127.0.0.1:8000/admin/
+
+#create admin
+python manage.py createsuperuser
+
+
+###################################################
+
+#Clone site to Fithub and PythonAnywhere
+
+#https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
+
+vim .gitignore
+
+git init
+git add .
+git remote add origin https://github.com/cp38510/django-test-blog.git
+git push -u origin master
+
+
+# Go to https://www.pythonanywhere.com/user/ and install:
+pip3.6 install --user pythonanywhere
+pa_autoconfigure_django.py https://github.com/cp38510/django-test-blog.git
+python manage.py createsuperuser
+
+
+###################################################
+
+#https://tutorial.djangogirls.org/ru/django_urls/
+# Change URL settings
+vim mysite/urls.py
+
+#Create blog/urls.py
+vim blog/urls.py
+
+#Change site "Logic"
+#https://tutorial.djangogirls.org/ru/django_views/
+vim blog/views.py
+
+
+#https://tutorial.djangogirls.org/ru/html/
+
+mkdir -p blog/templates/blog
+touch blog/templates/blog/post_list.html
+
+vim blog/templates/blog/post_list.html
+
+###################################################
+
+#https://tutorial.djangogirls.org/ru/django_orm/
+
+#source myvenv/bin/activate
+python manage.py shell
+
+#https://tutorial.djangogirls.org/ru/dynamic_data_in_templates/
+
+
+vim blog/views.py
+
+#https://tutorial.djangogirls.org/ru/django_templates/
+
+vim blog/templates/blog/post_list.html
+
+###################################################
+
+#https://tutorial.djangogirls.org/ru/css/
+
+vim blog/templates/blog/post_list.html
+
+#Change stile page
+mkdir -p blog/static/css
+vim blog/static/css/blog.css
+
+#change template page
+vim blog/templates/blog/post_list.html
+
+##LEARN:
+#https://www.codecademy.com/learn/learn-html
+#https://www.codecademy.com/learn/paths/web-development
+#https://www.codecademy.com/learn/make-a-website
+#https://www.codecademy.com/learn/learn-css
+
+
+###################################################
+
+
+#https://tutorial.djangogirls.org/ru/template_extending/
+
+#Create basic site template
+vim blog/templates/blog/base.html
+
+#Create teplate for post page
+vim blog/templates/blog/post_detail.html
+
+
+#Download to repo
+git add --all . && git commit -m "Add new files" && git push
+
+#Go to PythonAnywhere and update files
+git pull
+workon cp38510.pythonanywhere.com
+python manage.py collectstatic
+
+#Check changes https://cp38510.pythonanywhere.com/
+
+#We changed blog/urls.py, where we create template URL with name "post_detail", this template refet to view file "views.post_detail"
+
+###################################################
+
+Forms in Django
+#https://tutorial.djangogirls.org/ru/django_forms/
+
+#Add form:
+vim blog/forms.py
+
+#Add link to form page:
+vim blog/templates/blog/base.html
+
+#Add URL:
+vim blog/urls.py
+
+#Add view:
+vim blog/views.py
+
+#Add template for page with edit form:
+vim blog/templates/blog/post_edit.html
+
+###################################################
+
+#Security
+#https://tutorial.djangogirls.org/ru/django_forms/
+
+vim blog/templates/blog/base.html
+
+
+###################################################
+
+
+#For update site version on pythonanywhere.com
+git pull
+workon <your-pythonanywhere-domain>.pythonanywhere.com
+python manage.py collectstatic

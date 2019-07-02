@@ -1,0 +1,393 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can add post",
+    "content_type": 7,
+    "codename": "add_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can change post",
+    "content_type": 7,
+    "codename": "change_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can delete post",
+    "content_type": 7,
+    "codename": "delete_post"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$100000$JqAu01a0Bm2f$VQOzBno/pXT1YT+VNnBlWsyp1/lh5235qppPK2q2FLM=",
+    "last_login": "2019-07-01T03:58:23.334Z",
+    "is_superuser": true,
+    "username": "cp38510",
+    "first_name": "",
+    "last_name": "",
+    "email": "test@test.ru",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-06-26T04:19:41.101Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$100000$Yii18uhG9uen$9XLKkNTDSPS5i2nfnTaXBqatuISzwxQRc97wL38numg=",
+    "last_login": "2019-07-02T03:50:19.533Z",
+    "is_superuser": false,
+    "username": "test1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-07-02T03:48:55Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "39vssyeppfkkq85l8r1kr5xp9eiqc2d9",
+  "fields": {
+    "session_data": "ZjA1MjM2MTk5YjkxZDhjMDU5MTkzMGRkNWQ0MTI4YzZjZWM2Y2YwYjp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI3MWFkN2RmZTdkMzVjMDk3NzZiOTdiYmU1NDcxZTU5Njg3ZjJjYmRhIn0=",
+    "expire_date": "2019-07-16T03:50:19.537Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hpw1unigw59bgg00xz6l8r237mfbk0rx",
+  "fields": {
+    "session_data": "OTQ5N2Q3Y2EzY2YxNDg4ZGZhYTM5OWNlNmQ3NGM0YjhhYzZlYjFlZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5Mzg3ZTg5YmFmODBiNjMxMjJkNDI3NTkwZGNhZWEzNGU2MzljMjlmIn0=",
+    "expire_date": "2019-07-15T03:58:23.339Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pwkiglsnc6mky0an19l0rbigjstojqyt",
+  "fields": {
+    "session_data": "OTQ5N2Q3Y2EzY2YxNDg4ZGZhYTM5OWNlNmQ3NGM0YjhhYzZlYjFlZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5Mzg3ZTg5YmFmODBiNjMxMjJkNDI3NTkwZGNhZWEzNGU2MzljMjlmIn0=",
+    "expire_date": "2019-07-10T04:19:58.534Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 1,
+  "fields": {
+    "author": 1,
+    "title": "test1",
+    "text": "How the \u201cexploit\u201d works\r\n\r\nThe exploit works by following a playbook that was written by the Bitcoin industry. The exploit emerges in the gaps of a little puzzle consisting of a few key players:\r\n\r\n    Cryptocurrency exchanges (\u201con- and off-ramps\u201d) where you can buy and sell Bitcoin for dollars\r\n    Banks that give the exchanges their bank accounts\r\n    Regulators who set the know-your-customer (KYC) & anti-money laundering (AML) rules\r\n    Blockchain analysis firms who monitor cryptocurrency transactions for \u201csuspicious activity\u201d\r\n\r\n\r\nOLOLO",
+    "created_date": "2019-06-26T04:20:54Z",
+    "published_date": "2019-06-29T07:07:28.797Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 2,
+  "fields": {
+    "author": 1,
+    "title": "test2",
+    "text": "\u201cWhy me?\u201d\r\n\r\nIt\u2019s a question I often hear among my patients when I share a new diagnosis of cancer. People want to know why. Is it their fault? Did a family history catch up with them? Did they smoke or drink too much, should they have exercised more, was there a genetic component? Cancer is a common disease, and yet it never makes sense when it\u2019s happening to you.\r\n\r\nOn Sept. 13\u200a\u2014\u200ajust nine months ago\u200a\u2014\u200aI awoke after a colonoscopy to my wife leaning over my stretcher railing, sobbing. My wife, a radiologist at Harvard, is the rock of our family. I\u2019d never seen her cry like that in our over 20 years of marriage. She broke the news to me: They discovered colorectal cancer during my colonoscopy.\r\n\r\nI am only 48. I am healthy and have no risk factors. \u201cWhy me?\u201d\r\n\r\nNUUU\r\n\r\nTESt",
+    "created_date": "2019-06-26T04:22:52Z",
+    "published_date": "2019-06-29T07:10:44.084Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 3,
+  "fields": {
+    "author": 1,
+    "title": "Sample title",
+    "text": "Test",
+    "created_date": "2019-06-27T04:02:47.385Z",
+    "published_date": "2019-06-27T04:05:52.061Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 4,
+  "fields": {
+    "author": 1,
+    "title": "Sample title1",
+    "text": "Test1",
+    "created_date": "2019-06-27T04:03:16.872Z",
+    "published_date": null
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 5,
+  "fields": {
+    "author": 1,
+    "title": "test4",
+    "text": "Over the course of my career, I\u2019ve seen how Presidential focus and support of certain issues radically transforms not just how we approach those issues, but even how we understand and define them. With Race to the Top and ACA, for example, both transformed how talked about education and health, ushered in new organizations and innovations, new expectations for government, and different demands for what it means to do well.",
+    "created_date": "2019-06-27T04:29:24Z",
+    "published_date": "2019-06-27T04:30:13Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 6,
+  "fields": {
+    "author": 1,
+    "title": "test2",
+    "text": "test2",
+    "created_date": "2019-06-29T06:40:15.361Z",
+    "published_date": "2019-06-29T06:40:15.365Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 7,
+  "fields": {
+    "author": 2,
+    "title": "test by test",
+    "text": "test by test",
+    "created_date": "2019-07-02T03:50:45.181Z",
+    "published_date": "2019-07-02T03:50:45.184Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2019-06-26T04:22:17.415Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "test1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2019-06-26T04:23:08.686Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "test2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2019-06-27T04:30:16.142Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "test4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2019-07-02T03:48:56.114Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "test1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2019-07-02T03:50:14.463Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "test1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"is_staff\"]}}]"
+  }
+}
+]

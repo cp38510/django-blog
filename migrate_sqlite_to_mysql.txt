@@ -1,0 +1,47 @@
+# Migrate Django from SQLite to MySQL
+https://tproger.ru/articles/django-sqlite-to-mysql/
+
+#Install Mysql
+sudo apt-get install mysql-server mysql-client
+sudo /usr/bin/mysql_secure_installation
+
+#Create Database
+sudo mysql -u root
+CREATE DATABASE blog DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+CREATE USER django@localhost IDENTIFIED BY '******';
+GRANT ALL PRIVILEGES ON blog.* TO django@localhost;
+FLUSH PRIVILEGES;
+
+sudo apt-get install python3-dev libmysqlclient-dev build-essential -y
+source myvenv/bin/activate
+pip install mysqlclient
+
+#Backup db
+python manage.py dumpdata --indent=2 --exclude=contenttypes > datadump.json
+
+#Change db settings
+vim ./mysite/settings.py
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': './mysite/mysql.cnf',
+        },
+    }
+}
+```
+
+vim ./mysite/mysql.cnf
+```
+database = blog
+user = django
+password = PASSWORD
+default-character-set = utf8
+```
+
+
+#Migrate
+python manage.py makemigrations
+python manage.py migrate
+python manage.py loaddata datadump.json
